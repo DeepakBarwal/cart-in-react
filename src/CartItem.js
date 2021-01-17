@@ -10,22 +10,56 @@ class CartItem extends React.Component {
       img: '',
     };
     // this.increaseQuantity = this.increaseQuantity.bind(this);
+    // this.testing();
   }
+
+  // testing() {
+  //   const promise = new Promise((resolve, reject) => {
+  //     setTimeout(() => {
+  //       resolve('done');
+  //     }, 5000);
+  //   });
+
+  //   promise.then(() => {
+  //     // setState acts like a synchronous call
+  //     // no batching is performed here
+  //     this.setState({ qty: this.state.qty + 10 });
+  //     this.setState({ qty: this.state.qty + 10 });
+  //     this.setState({ qty: this.state.qty + 10 });
+  //     console.log(this.state);
+  //   });
+  // }
+
   increaseQuantity = () => {
-    // 2 ways to call setState
-    // 1st way
+    // 2 ways to call setState (asynchronous)
+    // 1st way -> in case of multiple setState calls, only last one works
     // this.setState({
     //   qty: this.state.qty + 1, // shallow merging
     // });
 
-    // 2nd way -> if prev state req then use this
+    // 2nd way -> if prev state req then use this. in case of multiple setState calls, all are queued and executed in order, to keep prevState up-to-date
+    this.setState(
+      (prevState) => {
+        return {
+          qty: prevState.qty + 1, // shallow merging
+        };
+      }
+      // () => {
+      //   console.log(this.state); // this callback is executed after setState changes state
+      // }
+    );
+  };
+  decreaseQuantity = () => {
+    const { qty } = this.state;
+    if (qty === 0) {
+      return;
+    }
     this.setState((prevState) => {
       return {
-        qty: prevState.qty + 1, // shallow merging
+        qty: prevState.qty - 1,
       };
     });
   };
-  decreaseQuantity = () => {};
   deleteItem = () => {};
   render() {
     const { price, title, qty } = this.state;
