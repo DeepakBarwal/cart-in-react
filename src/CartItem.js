@@ -77,20 +77,20 @@ class CartItem extends React.Component {
             <img
               alt='increase'
               className='action-icons'
-              src='https://www.flaticon.com/svg/vstatic/svg/992/992651.svg?token=exp=1610810817~hmac=964b7109d2e4aefaf8d33852bd12ac75'
+              src='https://www.flaticon.com/svg/vstatic/svg/992/992651.svg?token=exp=1610979948~hmac=9508b152fa240d016018ad2ba7705fa8'
               //   onClick={this.increaseQuantity.bind(this)}
               onClick={this.increaseQuantity}
             />
             <img
               alt='decrease'
               className='action-icons'
-              src='https://www.flaticon.com/svg/vstatic/svg/659/659892.svg?token=exp=1610810732~hmac=3c391567451c4e6e8a38bf8d7da979e4'
+              src='https://www.flaticon.com/svg/vstatic/svg/992/992683.svg?token=exp=1610980048~hmac=76cb05eebc27057c23f21a4e7df14e8a '
               onClick={this.decreaseQuantity}
             />
             <img
               alt='delete'
               className='action-icons'
-              src='https://www.flaticon.com/svg/vstatic/svg/1214/1214428.svg?token=exp=1610810890~hmac=63e4c061f5fc869165560cd181beb953'
+              src='https://www.flaticon.com/svg/vstatic/svg/1214/1214428.svg?token=exp=1610980084~hmac=1ed4eabb31d41b6f988c65cc8b24b176'
               onClick={this.deleteItem}
             />
           </div>
