@@ -22,20 +22,20 @@ const CartItem = (props) => {
           <img
             alt='increase'
             className='action-icons'
-            src='https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/3642717691543238914-512.png'
+            src='https://img.icons8.com/pastel-glyph/2x/plus.png'
             //   onClick={this.increaseQuantity.bind(this)}
             onClick={() => onIncreaseQuantity(product)}
           />
           <img
             alt='decrease'
             className='action-icons'
-            src='https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/18537612601543238905-512.png'
+            src='https://cdn4.iconfinder.com/data/icons/perfectline-freebies-2/512/Minus-512.png'
             onClick={() => onDecreaseQuantity(product)}
           />
           <img
             alt='delete'
             className='action-icons'
-            src='https://ddo0fzhfvians.cloudfront.net/uploads/icons/png/14796741191530273515-512.png'
+            src='https://img.icons8.com/small/452/filled-trash.png'
             onClick={() => onDeleteProduct(product.id)}
           />
         </div>
